@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <style>
+        :root {
+            color: #222;
+            font-family: Arial;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .shop {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+        }
+
+        .product h2 {
+            margin: 0;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            background-color: #eee;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        #basket-items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        ul {
+            display: block;
+            list-style: none;
+            padding: 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 300px;
+            margin: auto;
+            padding: 1rem;
+        }
+
+        li {
+            text-decoration: underline;
+            line-height: 1.8;
+        }
+        li:hover {
+            cursor: pointer;
+            text-decoration: none;
+        }
+        div {
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DOM API</h1>
+    
+    <div>
+        <input type="text" placeholder="todo">
+        <button>Add Task</button>
+    </div>
+
+    <ul id="todos"></ul>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

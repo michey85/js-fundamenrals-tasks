@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <style>
+        :root {
+            color: #222;
+            font-family: Arial;
+        }
+
+        .shop {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+        }
+
+        .product h2 {
+            margin: 0;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            background-color: #eee;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        #basket-items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 300px;
+            margin: auto;
+        }
+
+        li {
+            text-decoration: underline;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shop">
+        <div class="product">
+            <h2>Lenovo Yoga</h2>
+            <p>Price: <span class="price">3000</span></p>
+            <button onclick="addToBasket(1)">Buy</button>
+        </div>
+        <div class="product">
+            <h2>Acer Aspire</h2>
+            <p>Price: <span class="price">1800</span></p>
+            <button onclick="addToBasket(2)">Buy</button>
+        </div>
+        <div class="product">
+            <h2>Dell Vostro</h2>
+            <p>Price: <span class="price">3400</span></p>
+            <button onclick="addToBasket(3)">Buy</button>
+        </div>
+    </div>
+    <hr>
+    <div class="basket">
+        <h2 style="text-align: center;">Cart</h2>
+        <ul id="basket-items"></ul>
+        <h3 style="text-align: center;">Total price: <span id="total">0</span></h3>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

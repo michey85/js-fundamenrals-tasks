@@ -24,7 +24,7 @@ const developers = [
 
 const middleDevelopers = developers.map(dev => ({
     id: dev.id,
-    name: dev.name,
+    name: dev.fullName,
     skills: [...dev.skills, 'TypeScript'],
     salary: dev.salary + 500,
 }));

@@ -29,7 +29,7 @@ var riddle = {
     },
 }
 
-window.onload = function() {
+window.onload = () => {
     document.getElementById('riddle').innerText = riddle.question;
 }
 

@@ -7,4 +7,4 @@ class Rectangle {
     area() {
       return this.height * this.width;
     }
-  }
+}
